@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: data set of jaffle_shop
+    tables:
+      - name: customers
+      - name: orders
+      - name: payment
