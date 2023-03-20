@@ -1,3 +1,3 @@
-{% macro cents_to_doallars(amount) -%}
+{% macro cents_to_dollars(amount) -%}
     ({{ amount }} / 100)
 {% endmacro %}
