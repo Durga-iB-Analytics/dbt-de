@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: this table contains the customers data
+    columns:
+      - name: customer_id
+      - name: first_name
+      - name: last_name
+      - name: first_order_date
+      - name: most_recent_order_date
+      - name: number_of_orders
+      - name: lifetime_value
+  - name: fct_orders
+    description: this table contains the order data
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+      - name: order_date
+  - name: stg_orders
+    description: this table contains the order data at stage level
+    columns:
+      - name: order_id
+      - name: customer_id
+      - name: order_date
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['SUCCESS']
+      
+      
+    
